@@ -1,12 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
-import Vars from './Vars';
-import Animations from './Animations';
-import Typography from './Typography';
+import vars from './vars';
+import animations from './animations';
+import typography from './typography';
 
 const GlobalStyles = createGlobalStyle`
-    ${Vars}
-    ${Animations}
-    ${Typography}
+    ${vars}
+    ${animations}
+    ${typography}
     *, *:after, *:before {
         box-sizing: border-box;
         margin: 0;
@@ -53,10 +53,7 @@ const GlobalStyles = createGlobalStyle`
     a[aria-current="page"] {
         color: var(--favColour);
     }
-    .gatsby-image-wrapper img[src*=base64\\,] {
-    image-rendering: -moz-crisp-edges;
-    image-rendering: pixelated;
-    }
+  
 `;
 
 export default GlobalStyles;
